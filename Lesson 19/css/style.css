@@ -1,4 +1,4 @@
-/* *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -89,4 +89,4 @@ img {
 
 .timer-btn.is-active {
   background-color: #2196f3;
-} */
+}
