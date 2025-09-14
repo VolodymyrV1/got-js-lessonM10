@@ -31,6 +31,10 @@ starnBtn.addEventListener("click", handlerStart);
 
 function handlerStart() {
     result.innerHTML = "";
+    starnBtn.disabled = true; // Спосіб 1 дія 1
+    // starnBtn.removeEventListener("click", handlerStart); // Спосіб 2 дія 1
+
+
     const promises = [...container.children].map(() => {
         return new Promise((resolve, reject) => {
             const random = Math.random();
@@ -57,6 +61,9 @@ function handlerStart() {
                     
                     if(i === data.length - 1) {
                         result.textContent = isWinner ? "Winner" : "Loser";
+
+                        starnBtn.disabled = false; // Спосіб 1 дія 2
+                        // starnBtn.addEventListener("click", handlerStart); // Спосіб 2 дія 2
                     }
                 
                 

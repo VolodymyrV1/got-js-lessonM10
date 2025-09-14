@@ -120,3 +120,60 @@
 //             console.log(result);
             
 //         })
+
+
+
+// Як працюють мікротаски і макро (ДОДАТКОВО)
+// Приклад 1
+// setTimeout(() => {
+//     console.log("step 1");
+    
+// }, 0);
+
+// new Promise((resolve) => {
+//     resolve("step 2")
+// })
+//     .then(data => {
+//         console.log(data);
+//         setTimeout(() => {
+//             console.log("step 3");
+            
+//         }, 0);
+        
+//     })
+
+// setTimeout(() => {
+//     console.log("step 4");
+    
+// }, 0);
+
+
+//============= Приклад 2
+// setTimeout(() => {
+//     console.log("step 1");
+    
+// }, 0);
+
+// setTimeout(() => {
+//     console.log("step 2");
+    
+//     new Promise((resolve) => {
+//         resolve("step 3")
+//     })
+//         .then(data => {
+//             console.log(data);
+            
+//         })
+// }, 0);
+
+// new Promise((resolve) => {
+//     resolve("step 4")
+// })
+//     .then(data => {
+//         console.log(data);
+//     })
+
+// setTimeout(() => {
+//     console.log("step 5");
+    
+// }, 0);
